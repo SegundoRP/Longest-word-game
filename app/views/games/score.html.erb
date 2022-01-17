@@ -1,0 +1,13 @@
+<h1>Resultado</h1>
+<p><%= @sugerencia %></p>
+<% if @include %>
+  <% if @palabra %>
+    <p>Congratulations, your word <%= @suggestion %> is in english</p>
+  <% else %>
+    <p>Your word is not in english, try again</p>
+  <% end %>
+  <% else %>
+    <p>Your word is not in the grid, try again with <%= @letras %></p>
+<% end %>
+
+<p><%= link_to "Play again", new_path %></p>
